@@ -1,6 +1,7 @@
 import { globalCss } from "@stitches/react";
 import React from "react";
 import { Row, Tile } from "../Mahjong";
+import Board from "../Mahjong/Board";
 
 const globalStyles = globalCss({
     "@import": [
@@ -15,27 +16,43 @@ function App() {
     globalStyles();
     return (
         <>
+            <Board>
+                <Row>
+                    <Tile kind="dragonRed" orientation="left" />
+                    <Tile kind="dragonRed" orientation="top" />
+                    <Tile kind="dragonRed" orientation="right" />
+                    <Tile kind="dragonRed" orientation="bottom" />
+                </Row>
+            </Board>
+            <h2>Różne orientacje</h2>
             <Row>
                 <Tile kind="dragonRed" orientation="left" />
-                <Tile kind="dragonRed" orientation="right" />
                 <Tile kind="dragonRed" orientation="top" />
+                <Tile kind="dragonRed" orientation="right" />
                 <Tile kind="dragonRed" orientation="bottom" />
             </Row>
+            <h2>Jeden kamień na wiersz</h2>
             <Row>
                 <Tile kind="dragonRed" orientation="top" />
             </Row>
 
+            <h2>Góra</h2>
             <Row orientation="top">
+                <Tile kind="circleOne" />
+                <Tile kind="characterThree" />
                 <Tile kind="characterOne" />
                 <Tile kind="characterTwo" />
-                <Tile kind="characterThree" />
             </Row>
+            <h2>Prawo</h2>
             <Row orientation="right">
+                <Tile kind="circleOne" />
                 <Tile kind="characterOne" />
                 <Tile kind="characterTwo" />
                 <Tile kind="characterThree" />
             </Row>
+            <h2>Lewo</h2>
             <Row orientation="left">
+                <Tile kind="circleOne" />
                 <Tile kind="bambooOne" />
                 <Tile kind="bambooTwo" />
                 <Tile kind="bambooThree" />

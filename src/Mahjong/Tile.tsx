@@ -38,11 +38,12 @@ import windSouth from "./assets/wind-south.svg";
 import windWest from "./assets/wind-west.svg";
 import windNorth from "./assets/wind-north.svg";
 
-const scale = 32;
+const scale = 24;
 const tile = {
     width: 2.4 * scale,
     height: 3.2 * scale,
     depth: 0.6 * scale,
+    padding: 0.3 * scale,
 };
 
 const Wrapper = styled("div", {
@@ -53,8 +54,8 @@ const Wrapper = styled("div", {
     alignItems: "center",
     background: "#f4f2e7",
     margin: ".1em",
-    padding: ".5em .2em",
     position: "relative",
+    padding: tile.padding,
     "&::after, &::before": {
         content: "",
         position: "absolute",
