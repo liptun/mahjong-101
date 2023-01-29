@@ -1,17 +1,24 @@
 import { styled } from "@stitches/react";
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
+import { TOrientation } from "./types";
 
 const Wrapper = styled("div", {
     display: "flex",
-    gridGap: ".3em",
 });
 
 interface Props {
-    children: ReactNode;
+    children: React.ReactElement[] | React.ReactElement;
+    orientation?: TOrientation;
 }
 
-const Row: FC<Props> = ({ children }) => {
-    return <Wrapper>{children}</Wrapper>;
+const Row: FC<Props> = ({ children, orientation = "bottom" }) => {
+    return (
+        <Wrapper>
+            {React.Children.map(children, (child) => {
+                return React.cloneElement(child, { orientation });
+            })}
+        </Wrapper>
+    );
 };
 
 export default Row;

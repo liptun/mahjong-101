@@ -15,6 +15,27 @@ function App() {
     globalStyles();
     return (
         <>
+            <Row>
+                <Tile kind="dragonRed" orientation="left" />
+                <Tile kind="dragonRed" orientation="right" />
+                <Tile kind="dragonRed" orientation="top" />
+                <Tile kind="dragonRed" orientation="bottom" />
+            </Row>
+            <Row>
+                <Tile kind="dragonRed" orientation="left" />
+            </Row>
+
+            <Row orientation="left">
+                <Tile kind="bambooOne" />
+                <Tile kind="bambooTwo" />
+                <Tile kind="bambooThree" />
+                <Tile kind="bambooFour" />
+                <Tile kind="bambooFive" />
+                <Tile kind="bambooSix" />
+                <Tile kind="bambooSeven" />
+                <Tile kind="bambooEight" />
+                <Tile kind="bambooNine" />
+            </Row>
             <h2>Bambus</h2>
             <Row>
                 <Tile kind="bambooOne" />

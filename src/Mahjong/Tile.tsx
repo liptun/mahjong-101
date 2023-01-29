@@ -1,6 +1,8 @@
 import { styled } from "@stitches/react";
 import React, { FC } from "react";
 
+import { TKind, TOrientation } from "./types";
+
 import bambooOne from "./assets/bamboo-1.svg";
 import bambooTwo from "./assets/bamboo-2.svg";
 import bambooThree from "./assets/bamboo-3.svg";
@@ -36,66 +38,83 @@ import windSouth from "./assets/wind-south.svg";
 import windWest from "./assets/wind-west.svg";
 import windNorth from "./assets/wind-north.svg";
 
+const scale = 32;
+const tile = {
+    width: 2.4 * scale,
+    height: 3.2 * scale,
+    depth: 0.6 * scale,
+};
+
 const Wrapper = styled("div", {
-    border: "1px solid black",
-    borderRadius: ".5em",
-    width: "6em",
-    height: "8em",
+    width: tile.width,
+    height: tile.height,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: "white",
-    margin: ".2em",
+    background: "#f4f2e7",
+    margin: ".1em",
     padding: ".5em .2em",
+    position: "relative",
+    "&::after, &::before": {
+        content: "",
+        position: "absolute",
+        display: "block",
+    },
+    "&::after": {
+        width: tile.depth,
+        height: "100%",
+        left: "100%",
+        top: tile.depth / 2,
+        background: "#e8e5d8",
+        transform: "skewY(45deg)",
+    },
+    "&::before": {
+        content: "",
+        position: "absolute",
+        top: "100%",
+        left: tile.depth / 2,
+        display: "block",
+        width: "100%",
+        height: tile.depth,
+        background: "#d5d1c2",
+        transform: "skewX(45deg)",
+    },
+    variants: {
+        orientation: {
+            bottom: {},
+            left: {
+                width: tile.height,
+                height: tile.width,
+                "& img": {
+                    transform: "rotateZ(90deg)",
+                },
+            },
+            right: {
+                width: tile.height,
+                height: tile.width,
+                "& img": {
+                    transform: "rotateZ(-90deg)",
+                },
+            },
+            top: {
+                "& img": {
+                    transform: "rotateZ(180deg)",
+                },
+            },
+        },
+    },
 });
 
-const Vector = styled("img", { width: "100%" });
-
-type TKind =
-    | "bambooOne"
-    | "bambooTwo"
-    | "bambooThree"
-    | "bambooFour"
-    | "bambooFive"
-    | "bambooSix"
-    | "bambooSeven"
-    | "bambooEight"
-    | "bambooNine"
-    | "circleOne"
-    | "circleTwo"
-    | "circleThree"
-    | "circleFour"
-    | "circleFive"
-    | "circleSix"
-    | "circleSeven"
-    | "circleEight"
-    | "circleNine"
-    | "characterOne"
-    | "characterTwo"
-    | "characterThree"
-    | "characterFour"
-    | "characterFive"
-    | "characterSix"
-    | "characterSeven"
-    | "characterEight"
-    | "characterNine"
-    | "dragonRed"
-    | "dragonGreen"
-    | "dragonWhite"
-    | "windEast"
-    | "windSouth"
-    | "windWest"
-    | "windNorth"
-    | "blank";
+const Vector = styled("img", { width: tile.width });
 
 interface Props {
     kind: TKind;
-    label?: string
+    orientation?: TOrientation;
 }
 
-const Kind: FC<Props> = ({ kind }) => {
+const Kind: FC<Props> = ({ kind, orientation = "bottom" }) => {
     return (
-        <Wrapper>
+        <Wrapper orientation={orientation}>
             {kind === "bambooOne" && <Vector src={bambooOne} />}
             {kind === "bambooTwo" && <Vector src={bambooTwo} />}
             {kind === "bambooThree" && <Vector src={bambooThree} />}
