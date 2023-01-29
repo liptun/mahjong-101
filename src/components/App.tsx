@@ -7,6 +7,12 @@ const globalStyles = globalCss({
     "@import": [
         "url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap')",
     ],
+    "*": {
+        boxSizing: "border-box",
+        margin: 0,
+        padding: 0,
+        fontSize: "100%",
+    },
     body: {
         fontFamily: "'Poppins', sans-serif",
     },
