@@ -1,7 +1,8 @@
 import { styled } from "@stitches/react";
 import React, { FC } from "react";
 
-import bambooOne from "./assets/bamboo-1.min.svg";
+import bambooOne from "./assets/bamboo-1.svg";
+import bambooTwo from "./assets/bamboo-2.svg";
 
 const Wrapper = styled("div", {
     border: "1px solid black",
