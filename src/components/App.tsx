@@ -1,8 +1,6 @@
 import { globalCss } from "@stitches/react";
 import React from "react";
-import { Row, Tile } from "../Mahjong";
-import Board from "../Mahjong/Board";
-import Highlight from "../Mahjong/Highlight";
+import { Board, Highlight, River, Row, Tile } from "../Mahjong";
 
 const globalStyles = globalCss({
     "@import": [
@@ -23,6 +21,84 @@ function App() {
     globalStyles();
     return (
         <>
+            <h2>Góra</h2>
+            <Board>
+                <River orientation="top">
+                    <Tile kind="circleOne" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="characterThree" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="circleTwo" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="circleEight" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="bambooEight" />
+                    <Tile kind="circleThree" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="characterOne" />
+                    <Tile kind="dragonRed" />
+                </River>
+            </Board>
+            <h2>Prawo</h2>
+            <River orientation="right">
+                <Tile kind="circleOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleTwo" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleEight" />
+                <Tile kind="characterOne" />
+                <Tile kind="bambooEight" />
+                <Tile kind="circleThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="dragonRed" />
+            </River>
+            <h2>Lewo</h2>
+            <River orientation="left">
+                <Tile kind="circleOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleTwo" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleEight" />
+                <Tile kind="characterOne" />
+                <Tile kind="bambooEight" />
+                <Tile kind="circleThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="dragonRed" />
+            </River>
+            <h2>Dół</h2>
+            <River>
+                <Tile kind="circleOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleTwo" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="circleEight" />
+                <Tile kind="characterOne" />
+                <Tile kind="bambooEight" />
+                <Tile kind="circleThree" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterOne" />
+                <Tile kind="dragonRed" />
+            </River>
             <Row>
                 <Tile kind="circleOne" />
                 <Tile kind="bambooOne" />
