@@ -4,10 +4,10 @@ import { Row, Tile } from "../Mahjong";
 
 const globalStyles = globalCss({
     "@import": [
-        "url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap')",
+        "url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap')",
     ],
     body: {
-        fontFamily: "'IBM Plex Serif', serif",
+        fontFamily: "'Poppins', sans-serif",
     },
 });
 
@@ -15,6 +15,7 @@ function App() {
     globalStyles();
     return (
         <>
+            <h2>Bambus</h2>
             <Row>
                 <Tile tile="bambooOne" />
                 <Tile tile="bambooTwo" />
@@ -26,6 +27,7 @@ function App() {
                 <Tile tile="bambooEight" />
                 <Tile tile="bambooNine" />
             </Row>
+            <h2>Kółko</h2>
             <Row>
                 <Tile tile="circleOne" />
                 <Tile tile="circleTwo" />
@@ -37,6 +39,7 @@ function App() {
                 <Tile tile="circleEight" />
                 <Tile tile="circleNine" />
             </Row>
+            <h2>Znaki</h2>
             <Row>
                 <Tile tile="characterOne" />
                 <Tile tile="characterTwo" />
@@ -48,11 +51,14 @@ function App() {
                 <Tile tile="characterEight" />
                 <Tile tile="characterNine" />
             </Row>
+            <h2>Smoki</h2>
             <Row>
                 <Tile tile="dragonRed" />
                 <Tile tile="dragonGreen" />
                 <Tile tile="dragonWhite" />
-                <Tile tile="blank" />
+            </Row>
+            <h2>Wiatry</h2>
+            <Row>
                 <Tile tile="windEast" />
                 <Tile tile="windSouth" />
                 <Tile tile="windWest" />

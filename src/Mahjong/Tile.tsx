@@ -28,13 +28,13 @@ import characterSix from "./assets/character-6.svg";
 import characterSeven from "./assets/character-7.svg";
 import characterEight from "./assets/character-8.svg";
 import characterNine from "./assets/character-9.svg";
-import dragonRed from "./assets/dragon-red.svg"
-import dragonGreen from "./assets/dragon-green.svg"
-import dragonWhite from "./assets/dragon-white.svg"
-import windEast from "./assets/wind-east.svg"
-import windSouth from "./assets/wind-south.svg"
-import windWest from "./assets/wind-west.svg"
-import windNorth from "./assets/wind-north.svg"
+import dragonRed from "./assets/dragon-red.svg";
+import dragonGreen from "./assets/dragon-green.svg";
+import dragonWhite from "./assets/dragon-white.svg";
+import windEast from "./assets/wind-east.svg";
+import windSouth from "./assets/wind-south.svg";
+import windWest from "./assets/wind-west.svg";
+import windNorth from "./assets/wind-north.svg";
 
 const Wrapper = styled("div", {
     border: "1px solid black",
@@ -46,6 +46,7 @@ const Wrapper = styled("div", {
     alignItems: "center",
     background: "white",
     margin: ".2em",
+    padding: ".5em .2em",
 });
 
 const Vector = styled("img", { width: "100%" });
@@ -85,7 +86,7 @@ type TTile =
     | "windSouth"
     | "windWest"
     | "windNorth"
-    | "blank"
+    | "blank";
 
 interface Props {
     tile: TTile;
