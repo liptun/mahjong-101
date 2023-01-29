@@ -2,6 +2,7 @@ import { globalCss } from "@stitches/react";
 import React from "react";
 import { Row, Tile } from "../Mahjong";
 import Board from "../Mahjong/Board";
+import Highlight from "../Mahjong/Highlight";
 
 const globalStyles = globalCss({
     "@import": [
@@ -22,6 +23,36 @@ function App() {
     globalStyles();
     return (
         <>
+            <Row>
+                <Tile kind="circleOne" />
+                <Tile kind="bambooOne" />
+                <Highlight>
+                    <Tile kind="bambooTwo" />
+                    <Tile kind="bambooThree" />
+                    <Tile kind="bambooFour" />
+                </Highlight>
+                <Tile kind="circleOne" />
+                <Tile kind="bambooOne" />
+                <Highlight>
+                    <Tile kind="circleOne" />
+                    <Tile kind="bambooOne" />
+                </Highlight>
+                <Highlight>
+                    <Tile kind="circleOne" />
+                    <Tile kind="bambooOne" />
+                </Highlight>
+            </Row>
+            <Row orientation="left">
+                <Tile kind="circleOne" />
+                <Tile kind="bambooOne" />
+                <Highlight>
+                    <Tile kind="bambooTwo" />
+                    <Tile kind="bambooThree" />
+                    <Tile kind="bambooFour" />
+                </Highlight>
+                <Tile kind="circleOne" />
+                <Tile kind="bambooOne" />
+            </Row>
             <Board>
                 <Row>
                     <Tile kind="dragonRed" orientation="left" />

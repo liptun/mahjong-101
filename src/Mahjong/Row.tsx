@@ -2,7 +2,7 @@ import { styled } from "@stitches/react";
 import React, { FC } from "react";
 import { TOrientation } from "./types";
 
-const reverseChildIndex = {
+export const reverseChildIndex = {
     "& div:nth-child(1)": { zIndex: 17 },
     "& div:nth-child(2)": { zIndex: 16 },
     "& div:nth-child(3)": { zIndex: 15 },
@@ -25,20 +25,24 @@ const reverseChildIndex = {
 const RowWrapper = styled("div", {
     display: "flex",
     padding: 10,
+    paddingBottom: 30,
+    background: "rgba(0,0,0,.1)",
     variants: {
         orientation: {
             bottom: {},
             left: {
                 flexDirection: "column",
+                width: 140,
             },
             right: {
                 flexDirection: "column-reverse",
-                ...reverseChildIndex
+                width: 140,
+                ...reverseChildIndex,
             },
             top: {
                 flexDirection: "row-reverse",
                 justifyContent: "flex-end",
-                ...reverseChildIndex
+                ...reverseChildIndex,
             },
         },
     },
