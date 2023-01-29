@@ -38,7 +38,7 @@ import windSouth from "./assets/wind-south.svg";
 import windWest from "./assets/wind-west.svg";
 import windNorth from "./assets/wind-north.svg";
 
-const scale = 24;
+const scale = 28;
 const tile = {
     width: 2.4 * scale,
     height: 3.2 * scale,
@@ -66,7 +66,7 @@ const Wrapper = styled("div", {
         height: "100%",
         left: "100%",
         top: tile.depth / 2,
-        background: "#e8e5d8",
+        background: "linear-gradient(90deg, #e8e5d8 60%, #2f792f 60%)",
         transform: "skewY(45deg)",
     },
     "&::before": {
@@ -77,7 +77,7 @@ const Wrapper = styled("div", {
         display: "block",
         width: "100%",
         height: tile.depth,
-        background: "#d5d1c2",
+        background: "linear-gradient(#d5d1c2 60%, #2f792f 60%)",
         transform: "skewX(45deg)",
     },
     variants: {
