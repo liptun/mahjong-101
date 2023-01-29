@@ -17,52 +17,52 @@ function App() {
         <>
             <h2>Bambus</h2>
             <Row>
-                <Tile tile="bambooOne" />
-                <Tile tile="bambooTwo" />
-                <Tile tile="bambooThree" />
-                <Tile tile="bambooFour" />
-                <Tile tile="bambooFive" />
-                <Tile tile="bambooSix" />
-                <Tile tile="bambooSeven" />
-                <Tile tile="bambooEight" />
-                <Tile tile="bambooNine" />
+                <Tile kind="bambooOne" />
+                <Tile kind="bambooTwo" />
+                <Tile kind="bambooThree" />
+                <Tile kind="bambooFour" />
+                <Tile kind="bambooFive" />
+                <Tile kind="bambooSix" />
+                <Tile kind="bambooSeven" />
+                <Tile kind="bambooEight" />
+                <Tile kind="bambooNine" />
             </Row>
             <h2>Kółko</h2>
             <Row>
-                <Tile tile="circleOne" />
-                <Tile tile="circleTwo" />
-                <Tile tile="circleThree" />
-                <Tile tile="circleFour" />
-                <Tile tile="circleFive" />
-                <Tile tile="circleSix" />
-                <Tile tile="circleSeven" />
-                <Tile tile="circleEight" />
-                <Tile tile="circleNine" />
+                <Tile kind="circleOne" />
+                <Tile kind="circleTwo" />
+                <Tile kind="circleThree" />
+                <Tile kind="circleFour" />
+                <Tile kind="circleFive" />
+                <Tile kind="circleSix" />
+                <Tile kind="circleSeven" />
+                <Tile kind="circleEight" />
+                <Tile kind="circleNine" />
             </Row>
             <h2>Znaki</h2>
             <Row>
-                <Tile tile="characterOne" />
-                <Tile tile="characterTwo" />
-                <Tile tile="characterThree" />
-                <Tile tile="characterFour" />
-                <Tile tile="characterFive" />
-                <Tile tile="characterSix" />
-                <Tile tile="characterSeven" />
-                <Tile tile="characterEight" />
-                <Tile tile="characterNine" />
+                <Tile kind="characterOne" />
+                <Tile kind="characterTwo" />
+                <Tile kind="characterThree" />
+                <Tile kind="characterFour" />
+                <Tile kind="characterFive" />
+                <Tile kind="characterSix" />
+                <Tile kind="characterSeven" />
+                <Tile kind="characterEight" />
+                <Tile kind="characterNine" />
             </Row>
             <h2>Smoki</h2>
             <Row>
-                <Tile tile="dragonRed" />
-                <Tile tile="dragonGreen" />
-                <Tile tile="dragonWhite" />
+                <Tile kind="dragonRed" />
+                <Tile kind="dragonGreen" />
+                <Tile kind="dragonWhite" />
             </Row>
             <h2>Wiatry</h2>
             <Row>
-                <Tile tile="windEast" />
-                <Tile tile="windSouth" />
-                <Tile tile="windWest" />
-                <Tile tile="windNorth" />
+                <Tile kind="windEast" />
+                <Tile kind="windSouth" />
+                <Tile kind="windWest" />
+                <Tile kind="windNorth" />
             </Row>
         </>
     );

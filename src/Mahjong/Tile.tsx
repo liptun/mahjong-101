@@ -51,7 +51,7 @@ const Wrapper = styled("div", {
 
 const Vector = styled("img", { width: "100%" });
 
-type TTile =
+type TKind =
     | "bambooOne"
     | "bambooTwo"
     | "bambooThree"
@@ -89,48 +89,49 @@ type TTile =
     | "blank";
 
 interface Props {
-    tile: TTile;
+    kind: TKind;
+    label?: string
 }
 
-const Tile: FC<Props> = ({ tile }) => {
+const Kind: FC<Props> = ({ kind }) => {
     return (
         <Wrapper>
-            {tile === "bambooOne" && <Vector src={bambooOne} />}
-            {tile === "bambooTwo" && <Vector src={bambooTwo} />}
-            {tile === "bambooThree" && <Vector src={bambooThree} />}
-            {tile === "bambooFour" && <Vector src={bambooFour} />}
-            {tile === "bambooFive" && <Vector src={bambooFive} />}
-            {tile === "bambooSix" && <Vector src={bambooSix} />}
-            {tile === "bambooSeven" && <Vector src={bambooSeven} />}
-            {tile === "bambooEight" && <Vector src={bambooEight} />}
-            {tile === "bambooNine" && <Vector src={bambooNine} />}
-            {tile === "circleOne" && <Vector src={circleOne} />}
-            {tile === "circleTwo" && <Vector src={circleTwo} />}
-            {tile === "circleThree" && <Vector src={circleThree} />}
-            {tile === "circleFour" && <Vector src={circleFour} />}
-            {tile === "circleFive" && <Vector src={circleFive} />}
-            {tile === "circleSix" && <Vector src={circleSix} />}
-            {tile === "circleSeven" && <Vector src={circleSeven} />}
-            {tile === "circleEight" && <Vector src={circleEight} />}
-            {tile === "circleNine" && <Vector src={circleNine} />}
-            {tile === "characterOne" && <Vector src={characterOne} />}
-            {tile === "characterTwo" && <Vector src={characterTwo} />}
-            {tile === "characterThree" && <Vector src={characterThree} />}
-            {tile === "characterFour" && <Vector src={characterFour} />}
-            {tile === "characterFive" && <Vector src={characterFive} />}
-            {tile === "characterSix" && <Vector src={characterSix} />}
-            {tile === "characterSeven" && <Vector src={characterSeven} />}
-            {tile === "characterEight" && <Vector src={characterEight} />}
-            {tile === "characterNine" && <Vector src={characterNine} />}
-            {tile === "dragonRed" && <Vector src={dragonRed} />}
-            {tile === "dragonGreen" && <Vector src={dragonGreen} />}
-            {tile === "dragonWhite" && <Vector src={dragonWhite} />}
-            {tile === "windEast" && <Vector src={windEast} />}
-            {tile === "windSouth" && <Vector src={windSouth} />}
-            {tile === "windWest" && <Vector src={windWest} />}
-            {tile === "windNorth" && <Vector src={windNorth} />}
+            {kind === "bambooOne" && <Vector src={bambooOne} />}
+            {kind === "bambooTwo" && <Vector src={bambooTwo} />}
+            {kind === "bambooThree" && <Vector src={bambooThree} />}
+            {kind === "bambooFour" && <Vector src={bambooFour} />}
+            {kind === "bambooFive" && <Vector src={bambooFive} />}
+            {kind === "bambooSix" && <Vector src={bambooSix} />}
+            {kind === "bambooSeven" && <Vector src={bambooSeven} />}
+            {kind === "bambooEight" && <Vector src={bambooEight} />}
+            {kind === "bambooNine" && <Vector src={bambooNine} />}
+            {kind === "circleOne" && <Vector src={circleOne} />}
+            {kind === "circleTwo" && <Vector src={circleTwo} />}
+            {kind === "circleThree" && <Vector src={circleThree} />}
+            {kind === "circleFour" && <Vector src={circleFour} />}
+            {kind === "circleFive" && <Vector src={circleFive} />}
+            {kind === "circleSix" && <Vector src={circleSix} />}
+            {kind === "circleSeven" && <Vector src={circleSeven} />}
+            {kind === "circleEight" && <Vector src={circleEight} />}
+            {kind === "circleNine" && <Vector src={circleNine} />}
+            {kind === "characterOne" && <Vector src={characterOne} />}
+            {kind === "characterTwo" && <Vector src={characterTwo} />}
+            {kind === "characterThree" && <Vector src={characterThree} />}
+            {kind === "characterFour" && <Vector src={characterFour} />}
+            {kind === "characterFive" && <Vector src={characterFive} />}
+            {kind === "characterSix" && <Vector src={characterSix} />}
+            {kind === "characterSeven" && <Vector src={characterSeven} />}
+            {kind === "characterEight" && <Vector src={characterEight} />}
+            {kind === "characterNine" && <Vector src={characterNine} />}
+            {kind === "dragonRed" && <Vector src={dragonRed} />}
+            {kind === "dragonGreen" && <Vector src={dragonGreen} />}
+            {kind === "dragonWhite" && <Vector src={dragonWhite} />}
+            {kind === "windEast" && <Vector src={windEast} />}
+            {kind === "windSouth" && <Vector src={windSouth} />}
+            {kind === "windWest" && <Vector src={windWest} />}
+            {kind === "windNorth" && <Vector src={windNorth} />}
         </Wrapper>
     );
 };
 
-export default Tile;
+export default Kind;
