@@ -2,8 +2,21 @@ import { styled } from "@stitches/react";
 import React, { FC } from "react";
 import { TOrientation } from "./types";
 
-const Wrapper = styled("div", {
+const RowWrapper = styled("div", {
     display: "flex",
+    variants: {
+        orientation: {
+            bottom: {},
+            left: {
+                flexDirection: "column",
+            },
+            right: {
+                flexDirection: "column",
+            },
+            top: {
+            },
+        },
+    },
 });
 
 interface Props {
@@ -13,11 +26,15 @@ interface Props {
 
 const Row: FC<Props> = ({ children, orientation = "bottom" }) => {
     return (
-        <Wrapper>
+        <RowWrapper orientation={orientation}>
             {React.Children.map(children, (child) => {
-                return React.cloneElement(child, { orientation });
+                if (child.props.orientation) {
+                    return child;
+                } else {
+                    return React.cloneElement(child, { orientation });
+                }
             })}
-        </Wrapper>
+        </RowWrapper>
     );
 };
 
